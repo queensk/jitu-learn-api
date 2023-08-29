@@ -14,10 +14,8 @@ namespace learn_api.Models
 
         public int Price { get; set; }
 
-        [ForeignKey("instructorId")]
         public Instructor Instructor { get; set; }= new Instructor();
-
-        public Guid InstructorId { get; set; }
+        [ForeignKey("InstructorId")]
 
         public List<User> Users { get; set; } = new List<User>();
     }
